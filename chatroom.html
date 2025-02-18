@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/chatRoom.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=send" />
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <title>Chatroom</title>
+</head>
+<body>
+    <section class="card-view">  
+        <div class="header">
+            <button id="btn-chat" title="botão para visualizar as mensagens"><i class="fa-solid fa-message"></i></button>
+            <div class="alert" id="alert">
+                <!-- mensagens de erro ou alerta serão inseridas aqui -->
+            </div>
+            <button id="btn-task" title="botão para visualizar as tarefas"><i class="fa-solid fa-list-check"></i></i></button>
+        </div>
+        
+        
+        <section class="chat">
+            <!-- <img class="title-logo" src="https://jkss.com.br/wp-content/uploads/2024/12/Logo-Branca.png">
+            -->
+            <h2>Notificações - Operador <i class="fa-regular fa-bell fa-shake" style="font-size: 1.5rem;"></i></h2>
+            <section class="chat__messages" id="chat_Messages">
+                <div class="section-message">
+                    <div id="chatMessages">
+                        <!-- Mensagens serão exibidas aqui -->
+                    </div>
+                </div>
+
+            </section>
+            <button type="button" class="btn-viewChat" id="btnViewHistory" title="Visualizar histórico de mensagens">
+                Ver histórico de mensagens
+            </button>
+             <!-- Modal de histórico de mensagens -->
+             <div id="historyModal" class="modal">
+                <div class="modal-content">
+                <h3>Histórico de Mensagens</h3>
+                <ul id="historyMessages">
+                    <!-- O histórico será carregado aqui -->
+                </ul>
+                <button type="button" id="closeModal" title="Fechar histórico">Fechar</button>
+            </div>
+        </section>
+        <section class="container-task" id="container_task">
+            <div id="container_tarefas" class="container-tarefas">
+                
+                <form id="taskForm">
+                </form>
+
+                <div class="container-messages">
+                    <!-- Lista de Tasks -->
+                    <h3>Estas são suas tarefas</h3>
+                    <ul id="taskList"></ul>
+                </div>
+            </div>
+
+        </section>
+        
+    </section>
+
+   </main>
+
+    <script src="js/chat.js"></script> <!-- Link para o arquivo JavaScript separado -->
+</body>
+</html>

@@ -1,0 +1,437 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root{
+    font-size: 14px;
+}
+
+body, html {
+    margin:0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    font-family: 'Roboto', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #d3d3d3;
+}
+
+/* NÃO REMOVER, dive dificuldade de modificar os estilos da ul então apelei e removi os estilos de todas */
+ul {
+    all: unset;
+}
+
+
+main{
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    height: 80dvh;
+    width: 100%;
+}
+
+.card-send{
+    /* background: linear-gradient(to bottom, #00aaff, #0044cc); */
+    background-color: #fff;
+    border-radius: 1rem;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    width: 40%;
+    padding: 10px 0;
+    position: relative;
+    overflow: hidden;
+    margin: 1rem;
+}
+.header {
+    background: linear-gradient(to bottom, #00aaff, #0044cc);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%; 
+    padding: 1rem;
+    position: absolute; 
+    top: 0; 
+    box-sizing: border-box;
+}
+
+    .header button {
+        background: none;
+        border: none;
+        font-size: 24px;
+        color: #fff;
+        padding: 10px;
+        border-radius: 10px;
+        cursor: pointer;
+        transition: .4s;
+    }
+    .header button:hover{
+        transform: scale(1.1);
+    }
+
+
+    .container {
+        top: 50%;
+        display: flex;
+        width: 100%;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+    .left {
+        background: linear-gradient(to bottom, #00aaff, #0044cc);
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 4rem;
+        box-sizing: border-box;
+    }
+    .left img {
+        width: 20rem;
+        height: 20rem;
+    }
+    .left h2 {
+        color: #f2f2f2;
+        font-weight: 500;
+        margin-top: 20px;
+    }
+    .left p {
+        color: #f2f2f2;
+        text-align: center;
+        margin-top: 10px;
+        font-weight: 300;
+    }
+    .right {
+        background-color: white;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 4rem;
+        box-sizing: border-box;
+    }
+    .right h1 {
+        font-weight: 500;
+        margin-bottom: 20px;
+    }
+    .right form {
+        width: 100%;
+        max-width: 300px;
+    }
+    .right form input[type="text"],
+    .right form input[type="password"] {
+        width: 90%;
+        padding: 1rem;
+        margin: 10px 0;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+    }
+    .right form a {
+        color: #888;
+        font-size: 0.9rem;
+        text-decoration: none;
+        display: block;
+        text-align: right;
+        margin-bottom: 20px;
+    }
+    .right form button {
+        width: 100%;
+        padding: 10px;
+        background-color: #555;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        font-size: 1em;
+        cursor: pointer;
+    }
+    .right .google-signin {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 20px 0;
+        cursor: pointer;
+    }
+    .right .google-signin img {
+        width: 20px;
+        margin-right: 10px;
+    }
+    .right .create-account {
+        color: #888;
+        font-size: 0.9em;
+    }
+    .right .create-account a {
+        color: #888;
+        text-decoration: none;
+    }
+
+    .chat {
+        width: 100%;
+        display: none;
+        flex-direction: column;
+    }
+    .chat > h2{
+        margin-top: 6rem;
+    }
+
+.chat__form{
+    display: grid;
+    grid-template-columns: 1fr 10%;
+    gap: 1rem; 
+    margin: 1rem;
+}
+
+    /* modifica o icone tbm */
+    .chat__form > button{
+        color: #212121;
+        height: 3rem;
+        background: transparent;
+        border: none;
+        font-size: 1.5rem;
+    }
+
+    .chat__messages > div {
+        border-radius: 1rem;
+        border: 0.1rem solid #212121;
+        background: #f2f2f2;
+        color: #212121;
+        padding: 0.1rem;
+        font-size: 1rem;
+        font-weight: 500;
+        margin: 1rem;
+    }
+
+    .message--status{
+        color: #00aaff;
+        font-size: 1rem;
+        margin: 0.5rem;
+    }
+
+    .message--sender{
+        color: #0044cc;
+        display: block;
+        margin-bottom: 1rem;
+        font-weight: 700;
+    }
+
+    .message--date {
+        display: block;
+        margin-bottom: 1rem;
+        font-weight: 700;
+    }
+
+    .message--date {
+        position: absolute;
+        right: 3rem;
+        font-size: 1rem;
+        color: #212121;
+    }
+
+.chat {
+    width: 100%;
+    flex-direction: column;
+}
+
+    .chat__input{
+        width: 100%;
+        height: 2rem;
+        padding: 0.5rem;
+    }
+    .chat__input:focus{
+        outline: none;
+        border: 0.2rem solid blue;
+    }
+ 
+.btn-viewHistory{
+    color: #212121;
+    background: transparent;
+    border: none;
+    padding: 1rem;
+    transition: .4s;
+}
+
+.btn-viewHistory:hover{
+    transform: scale(1.1);
+}
+
+.taskForm{
+    width: 100%;
+}
+
+.task-date{
+    font-size: 1rem;
+    margin: 0.2rem;
+}
+.btn-textAria{
+    background: linear-gradient(to bottom, #00aaff, #0044cc);
+    border-radius: 5rem;
+    color: #fff;
+    width: 7%;
+    height: 5dvh;
+    margin: 1rem;
+    padding: 1rem;
+    color: white;
+    font-size: 1rem;
+    border: none;
+    border-radius: 50px;
+    overflow: hidden;
+    transition: width 0.5s ease;
+    cursor: pointer;
+}
+
+    .btn-textAria .icon {
+        font-size: 1.2rem;
+    }
+
+    .btn-textAria .text{
+        opacity: 0;
+        white-space: nowrap;
+        transition: opacity 0.5s ease;
+    }
+
+    .btn-textAria:hover,
+    .btn-textAria:focus{
+        width: 150px;
+    }
+
+    .btn-textAria:hover .text,
+    .btn-textAria:focus .text{
+        opacity: 1; 
+        margin-left: 10px;
+    }
+
+
+.title-text{
+    margin-top: 6rem;
+}
+
+.textArea {
+    color: #212121;
+    width: 95%;
+    margin-top: 1rem;
+    padding: 1rem 0 0 1rem;
+    outline: none;
+}
+
+.textArea:focus {
+    border: 0.2rem solid #0044cc; 
+    outline: none; 
+}
+
+
+.btn{
+    margin-bottom: -0.5rem;
+}
+
+#task-list{
+    padding: 1rem;
+    border: 0.1rem solid #212121;
+}
+
+.form-three{
+    background-color: #f2f2f2;
+    border-radius: 1rem;
+    border: 0.1rem solid #212121;
+    margin: 1rem; 
+    list-style: none;    
+    padding: 0.1rem;  
+    gap: 1rem;
+}
+
+.container-messages{
+    margin: 0;
+    list-style: none;
+    width: 100%;
+    height: 100%;
+}
+
+
+.btn > button{
+    font-size: 1.5rem;
+    border: none;
+    background-color: transparent;
+    margin: 1rem;
+    transition: .4s;
+}
+
+
+.btn-completeTask:hover{
+    color: green;
+    transform: scale(1.5);
+}
+.btn-deleteTask:hover{
+    color: red;
+    transform: scale(1.5);
+}
+
+.sumir{
+    display: none;
+}
+
+
+/* Estilos para o modal */
+.modal {
+    display: none; /* Inicialmente escondido */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.modal-content {
+    background-color: white;
+    color: #000;
+    padding: 5rem;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 100vh;
+    position: relative;
+    max-height: 100vh; 
+    overflow: auto;
+}
+
+
+#historyMessages {
+    list-style-type: none;
+    padding: 0;
+    margin-bottom: 20px;
+}
+
+#historyMessages {
+    display: grid;                
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;                  
+}
+
+#historyMessages li {
+    margin-top: 1rem;
+    list-style-type: none;    
+    background-color: #f2f2f2;   
+    padding: 1rem;                
+    border-radius: 1rem;     
+}
+
+
+#closeModal {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: #d9534f;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#closeModal:hover {
+    background-color: #c9302c;
+}
+
+.alert{
+    color: #fff;
+}

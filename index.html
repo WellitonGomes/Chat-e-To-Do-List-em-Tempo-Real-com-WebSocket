@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/home.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=send" />
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <main>
+
+        <section class="login">
+            <div class="container">
+                <div class="left">
+                 <img alt="Illustration of a colorful bird with flowers" height="300" src="https://jkss.com.br/wp-content/uploads/2024/12/Logo-Branca.png" width="300"/>
+                 <h2>
+                  Bem vindo ao chat de comunicações JK
+                 </h2>
+                 <p>
+                  Mande mensagens ou crie tarefas para os operadores.
+                 </p>
+                </div>
+                <div class="right">
+                 <h1>
+                  Seção de identificação
+                 </h1>
+                 <h2>
+                  Entre com seu nome e sua função
+                 </h2>
+                 <form class="login__form">
+                    <input type="text" class="login__input" id="username" title="Digite seu nome/função" placeholder="Seu nome/função" required>
+                  <button type="submit" class="login__button" title="entre logado com sua função">Entrar</button>
+                 </form>
+                 </div>
+                </div>
+        </section>
+
+        <section class="card-send"> 
+            
+            <!-- <h2 class="title-text">Chat de Comunicações  
+                <i class="fa-regular fa-comments" style="font-size: 1.5rem;"></i>
+            </h2> -->
+            <!-- <img class="title-logo" src="https://jkss.com.br/wp-content/uploads/2024/12/Logo-Branca.png"> -->
+            
+            <div class="header">
+                <button id="btn-chat" title="botão para visualizar as mensagens"><i class="fa-solid fa-message"></i></button>
+                <div class="alert" id="alert">
+                    <!-- mensagens de erro ou alerta serão inseridas aqui -->
+                </div>
+                <button id="btn-task" title="botão para visualizar as tarefas"><i class="fa-solid fa-list-check"></i></i></button>
+            </div>
+            <section class="chat">
+                <h2>Ultimas mensagens:</h2>
+    
+                <section class="chat__messages" id="chatMessages">
+                        <!-- Mensagens do chat serão exibidas aqui -->
+                </section>
+                <form class="chat__form">
+                    <input type="text" class="chat__input" id="messageInput"  title="Digite sua mensagem para os Operadores" placeholder="Digite uma mensagem" required>
+                    <button type="submit" class="chat__button">
+                        <i class="fa-solid fa-share"></i>
+                    </button>
+                </form>   
+                <button type="button" class="btn-viewHistory" id="btnViewHistory" title="Visualizar histórico de mensagens">
+                    Ver histórico de mensagens
+                </button>
+                <!-- Modal de histórico de mensagens -->
+            <div id="historyModal" class="modal">
+                
+                <div class="modal-content">
+                    <button type="button" id="closeModal" title="Fechar histórico">Fechar</button>
+                    <!-- <h3 class="title-text">Histórico de Mensagens</h3> -->
+                    <ul id="historyMessages">
+                        
+                        <!-- O histórico será carregado aqui -->
+                    </ul>
+                    
+                </div>
+            </div>
+                
+        
+            </section>
+            <section class="container-task" id="container_task">
+                <div id="container_tarefas" class="container-tarefas">
+                    <!-- Formulário para criar uma nova task -->
+                     <div class="content-header">
+                        <h3 class="title-text">Crie tarefas para os Operadores</h3>
+                     </div>
+                    
+                    <form id="taskForm">
+                        <textarea class="textArea" id="content" placeholder="Descreva a tarefa" required></textarea><br>
+                        <button class="btn-textAria" type="submit" title="adicionar nova tarefa">
+                            <span class="icon">
+                                <i class="fa-solid fa-plus"></i>
+                            </span>
+                            <span class="text">Adicionar</span>
+                        </button>
+                    </form>
+                            
+                    <div class="container-messages">
+                        <!-- Lista de Tasks -->
+                        <h3>Lista de Tasks</h3>
+                        <ul id="taskList"></ul>
+                    </div>
+                </div>
+
+            </section>
+            
+        </section>
+    
+
+    </main>
+
+    <script src="js/chat.js"></script>
+</body>
+</html>
